@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+</head>
+<body>
+    <div id="forget-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForgetPasswordForm()">&times;</span>
+            <h2>Kun Manta Kamar Sirri</h2>
+            <form id="forget-password-form" onsubmit="sendPassword(event)">
+                <label for="forget-email-phone">Saka Email ko Numbar Waya:</label>
+                <input type="text" id="forget-email-phone" name="Email or Phone" placeholder="Email ko Numbar Waya" required><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the Forget Password form
+        function showForgetPasswordForm() {
+            document.getElementById("forget-password-modal").style.display = "block";
+        }
+
+        // Function to close the Forget Password form
+        function closeForgetPasswordForm() {
+            document.getElementById("forget-password-modal").style.display = "none";
+        }
+
+        // Function to send the password to the user's email or phone
+        function sendPassword(event) {
+            event.preventDefault();
+
+            // Get user input
+            var emailOrPhone = document.getElementById("forget-email-phone").value;
+
+            // Here you can implement logic to retrieve and send the password
+            // For now, let's just notify the user that the password will be sent
+            alert("Password will be sent to: " + emailOrPhone);
+
+            // Close the Forget Password form
+            closeForgetPasswordForm();
+        }
+
+        // Function to handle login
+        function login(event) {
+            event.preventDefault();
+
+            // Get user input
+            var emailOrPhone = document.getElementById("email-phone").value;
+            var password = document.getElementById("password").value;
+
+            // Here you can perform authentication, for now, let's assume authentication is successful
+            // Redirect to dashboard page with query parameters
+            window.location.href = "dashboard.html?emailPhone=" + emailOrPhone;
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+  Botum {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .typing-animation {
+    overflow: hidden; /* Ensures the text is not visible until animated */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    border-right: .15em solid orange; /* Creates the typing cursor effect */
+    animation: typing 5s steps(18, end), blink-caret .75s step-end infinite;
+  }
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+</style>
+</head>
+<body>
+<div class="typing-animation"><center>Foot is a Life</center></div>
+    <style>
+        body {
+     background-image: url('b.png');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f5ff;
+}
+
+.container {
+background-image: url('gyk.png');
+    width: 80%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.background-image {
+    background-image: url('te.png'); 
+    background-size: cover;
+    height: 30vh;
+}
+
+    </style>
+    <style>
+    
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-shadow: 4px 4px 4px #ff2a15;
+            text-align: center;
+            
+        }
+        nav {
+            background-color: #f2f2f2;
+            padding: 1px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none
+            color: #333;
+        }
+        .logo {
+            width: 60px;
+            height: auto;
+            display: flex;   
+            border-radius: 60%;
+          
+            
+        }
+        .language-select {
+            margin-top: 5px;
+            
+        }
+        footer {
+            background-color: #000000;
+            color: white;
+       text-color: #ff152a;   
+            text-align: center;
+            padding: 10px;
+            position: fixed
+            bottom: 0;
+            width: 95%;
+           text-shadow: 2px 3px 3px #5fe3da;
+             
+          
+        }
+    </style>
+</style>
+<nav>
+        <div class="language-select">
+            <label for="language">Select Language:</label>
+            <select name="language" id="language" onchange="changeLanguage(this)">
+                <option value="select">Select</option>                 
+                <option value="english">English</option>
+                <option value="hausa">Hausa</option>
+            </select>
+        </div>
+    </nav>
+    <nav>
+        <a href="home page.html">Home page:</a>
+        <a href="about.html">About:</a>       
+        <a href="#">Contact Us</a>
+        </nav>
+        </header>
+    <main>
+     <script>
+        function changeLanguage(select) {
+            var selectedOption = select.value;
+            if (selectedOption === "english") {
+                window.location.href = "long in.html"; // Replace with the actual URL of the English page
+            } else if (selectedOption === "hausa") {
+                window.location.href = "login haus.html"; // Replace with the actual URL of the Hausa page
+            }
+        }
+    </script> 
+    <section>
+    <div class="background-image">
+        </section>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <div>
+        <p class="text-color"><center>Your Agritech Solution Account<center></p>
+            </div>
+        <form id="login-form" onsubmit="login(event)">
+            <label for="email-phone">Email or Phone:</label>
+            <input type="text"                  id="email-phone"    name="Email or Phone" placeholder="Email or Phone" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password"
+     name="password" placeholder="Password" required><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <section>
+    
+    </section>
+    <script>
+        function login(event) {
+    event.preventDefault();
+
+    // Get user input
+    var emailOrPhone = document.getElementById("email-phone").value;
+    var password = document.getElementById("password").value;
+
+    // Here you can perform authentication, for now, let's assume authentication is successful
+    // Redirect to dashboard page with query parameters
+    window.location.href = "dashboard.html?emailPhone=" + emailOrPhone;
+}
+
+    </script>
+    </script>
+    <p><a href="forget.html" ><center>Forget Password?</center></a></p>
+    </div>
+</body>
+</html>

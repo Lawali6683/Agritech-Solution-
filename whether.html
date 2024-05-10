@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+        }
+        header {
+            background-color: #2176AE;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #forecast {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .forecast-item {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Weather Forecast</h1>
+    </header>
+
+    <section id="forecast">
+       
+    </section>
+<header>
+  <h styles ="color: red">INTRODUCTION</h>
+</header>
+
+<section>
+  <h2><center  style ="color: green">Weather forecasts play a crucial role in aiding Nigerian farmers in their agricultural activities. Here's an introduction to how weather forecasts benefit farmers in Nigeria:</center></h2>
+
+  <ol style="color: green;">
+    <li><strong style ="color: green">Crop Planning:</strong style="color: green;"> Farmers rely on weather forecasts to plan their planting and harvesting schedules. Knowing the upcoming weather conditions helps them decide which crops to plant and when, optimizing their yield.</li>
+    <li><strong>Irrigation Management:</strong> In regions with irregular rainfall patterns, farmers use weather forecasts to plan irrigation schedules efficiently. This ensures proper water management, which is crucial for crop growth and health.</li>
+    <li><strong>Pest and Disease Management:</strong> Weather forecasts can provide insights into potential pest and disease outbreaks. Farmers can take preventive measures or apply treatments accordingly, reducing crop losses.</li>
+    <li><strong>Resource Allocation:</strong> Weather forecasts help farmers allocate resources such as labor, fertilizers, and pesticides effectively. For example, if heavy rainfall is predicted, farmers may need to allocate more resources to drainage maintenance to prevent flooding.</li>
+    <li><strong>Risk Management:</strong> Extreme weather events like droughts, floods, and storms can devastate crops. Weather forecasts allow farmers to prepare for such events by implementing mitigation strategies or purchasing crop insurance.</li>
+    <li><strong style="color: green">Livestock Management:</strong style="color: green;"> Weather forecasts also impact livestock farming. Farmers can plan feed and shelter arrangements based on expected weather conditions, ensuring the well-being of their animals.</li>
+  </ol>
+
+  <div class="benefits5">
+    <p style="color: green;">Overall, access to accurate weather forecasts empowers Nigerian farmers to make informed decisions, maximize productivity, and mitigate risks,7  ultimately contributing to food security and economic stability in the agricultural sector.</p>
+  </div>
+    <footer>
+        <p>Powered by <a href="https://weatherapi.com" style="color: white;">Weather</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <style >
+        body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F2F2F2;
+}
+
+header {
+    background-color: #008CBA;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed
+    bottom: 0;
+    width: 100%;
+}
+
+#forecast {
+    padding: 20px;
+}
+
+.forecast-item {
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+    </style>
+    <script>
+        // Replace 'YOUR_API_KEY' with your actual API key
+const apiKey = 'YOUR_API_KEY';
+const forecastElement = document.getElementById('forecast');
+
+function fetchWeather(latitude, longitude) {
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${latitude},${longitude}&days=3&aqi=no&alerts=no`;
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        displayWeather(data);
+    })
+    .catch(error => {
+        console.error('Error fetching weather data:', error);
+    });
+}
+
+function displayWeather(data) {
+    const forecastData = data.forecast.forecastday;
+    let innerHTML = '';
+
+    forecastData.forEach(day => {
+        innerHTML += `
+        <div class="forecast-item">
+            <h3>${day.date}</h3>
+            <p>Max Temp: ${day.day.maxtemp_c}°C</p>
+            <p>Min Temp: ${day.day.mintemp_c}°C</p>
+            <p>Condition: ${day.day.condition.text}</p>
+        </div>
+        `;
+    });
+
+    forecastElement.innerHTML = innerHTML;
+}
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            fetchWeather(position.coords.latitude, position.coords.longitude);
+        }, () => {
+            alert('Location access denied. Default location will be used.');
+            fetchWeather(9.0820, 8.6753); // Default to Nigerian coordinates
+        });
+    } else {
+        alert('Geolocation is not supported by this browser.');
+    }
+}
+
+getLocation();
+
+    </script>
+    <style >
+        footer {
+            background-color: #000000;
+            color: white;
+       text-color: #ff152a;   
+            text-align: center;
+            padding: 10px;
+            position: fixed
+            bottom: 0;
+            width: 95%;
+           text-shadow: 2px 3px 3px #ffdc55;
+             
+          
+        }
+    </style>
+    <footer>
+    <p><center>&copy; 2024 This page development by Farida Bashir Mustapha and Surajo Habibu Ibrahim, 3mtt fellows</center></p>
+</footer>
+</body>
+</html>
