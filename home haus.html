@@ -94,9 +94,47 @@
         <div class="logo-container">
         <img src="logo.png" alt="Agritech Solution Logo" class="logo"></div>
         <p id="gh6">
-            🌱 Barka da zuwa Nigerian Agritech Solution don sauyin Noma!🌾
+            🌱 Barka da zuwa Nigerian Agritech Solution don sauyin Noma!
         <h1> Nigerian Agritech Solution</h1>
-    </header>
+    
+  <style>
+        
+}
+
+.video-container {
+    
+    width: 100%;
+    height: 100%;
+    Border-radius: 20px;
+    Color: green;
+    Pending: 20px;
+    Padding:0px;
+    
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    
+    top: 140%;
+    left: 50%;
+    transform: 
+    object-fit: cover
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop class="video">
+            <source src="video5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>       
+    </div>
+    </div>
+</body>
+</html></header>
   
         <style>
   #Current {
@@ -360,6 +398,46 @@
     </section>
     
     <style>
+        
+}
+
+.video-container {
+    
+    width: 100%;
+    height: 100%;
+    Border-radius: 20px;
+    Color: green;
+    Pending: 20px;
+    Padding:0px;
+    
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    
+    top: 140%;
+    left: 50%;
+    transform: 
+    object-fit: cover
+    
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop class="video">
+            <source src="video6.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>       
+    </div>
+    </div>
+</body>
+</html>      
+        </p></section>
+    
+    <style>
   header {
     margin: 0;
     padding: 0;
@@ -384,14 +462,14 @@
     line-height: 1.6;
   }
   .blue-bg {
-    background-color: #253adebe;
+    background-color:#72c38cc1 ;
   }
   .white-bg {
     background-color: #ffffff;
     color: #333;
   }
   .red-bg {
-    background-color: #dc3545;
+    background-color: #519bc3c1;
   }
   .yellow-bg {
     background-color: #ffc107;
@@ -642,21 +720,9 @@
 </center></h2>
 </div>
 <section>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <style>
-        bod {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
+    
+    <style>        
         #registrationForm {
-            background-image: url('gyk.png');
             font-size: 14px;
             border-radius: 20px;
             font-family: Arial;
@@ -672,22 +738,12 @@
         }
         #registrationContainer.open {
             display: block;
-        }
-        .arrow {
-            display: inline-block;
-            width: 0;
-            height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid red;
-            margin-top: 10px;
-            transition: transform 0.5s;
-        }
-        .arrow.rotate {
-            transform: rotate(180deg);
+            
         }
         #registerButton {
-            background-color: #ff2a15;
+           
+             background-color: #ff2a15
+       
             color: white;
             border: none;
             padding: 10px 50px;
@@ -707,12 +763,7 @@
             width: 95%;
             padding: 8px;
             margin-bottom: 10px;
-                       
-    border-top: 2px solid blue;
-    border-right: 2px solid #fff155;
-    border-bottom: 2px solid #ff15a8;
-    border-left: 2px solid #ffdc2b; 
-                        
+            border: 2px solid blue;
             border-radius: 10px;
             font-size: 14px;
         }
@@ -731,31 +782,59 @@
         #yes {
             text-align: center;
         }
+        
+       #registerButton{
+      
+         color: white;
+            border: none;
+            padding: 10px 50px;
+            cursor: pointer;
+            
+            font-size: 16px;  
+            background-color: #ff0000; 
+            border-radius: 5%;
+            animation: colorChange1 3s infinite;
+        }
+
+        @keyframes colorChange1 {
+            0% {
+                background-color: #ff0000; 
+            }
+            33% {
+                background-color: #00ff00; 
+            }
+            66% {
+                background-color: #0000ff; 
+            }
+            100% {
+                background-color: #ff0000; 
+            }
+        }
     </style>
 </head>
 <body>
 <div id="registrationForm">
-    <button id="registerButton" onclick="toggleRegistration()">Yi Rigista Yan zu</button>
+    <button id="registerButton" onclick="toggleRegistration()">Yi Register Yanzu</button>
     <div id="registrationContainer">
         <form id="registration-form" onsubmit="submitForm(event)">
-            <label for="first-name">Sunan ku:</label>
-            <input type="text" id="first-name" required>
+            <label for="first-name">Sunan Ka:</label>
+            <input type="text" id="first-name" name="first-name" required>
             
-            <label for="surname">Sunan mahaifin ku:</label>
-            <input type="text" id="surname" required>
+            <label for="surname">Sunan Mahaifi:</label>
+            <input type="text" id="surname" name="surname" required>
             
-            <label for="age">Shekaru:</label>
-            <input type="number" id="age" required>
+            <label for="age">Shekarun Ka:</label>
+            <input type="number" id="age" name="age" required>
             
-            <label for="farmer">Kai Manomi Ne?</label>
-            <select id="farmer" required>
+            <label for="farmer">Ku Manomi Ne?</label>
+            <select id="farmer" name="farmer" required>
                 <option value="">Zabi</option>
-                <option value="yes">I,</option>
+                <option value="yes">I</option>
                 <option value="no">Aa</option>
             </select>
             
             <label for="country">Kasa:</label>
-            <select id="country" required>
+            <select id="country" name="country" required>
                 <option value="Select">Zabi</option>
                 <option value="Nigeria">Nigeria</option>
                 <option value="Niger">Niger</option>
@@ -767,36 +846,36 @@
                 <option value="Angola">Angola</option>
                 <option value="Benin">Benin</option>
                 <option value="Zimbabwe">Zimbabwe</option>
-                <option value="Others">Others</option>
+                <option value="Others">Wasu</option>
             </select>
             
             <label for="state">Jiha:</label>
-            <input type="text" id="state" required>
+            <input type="text" id="state" name="state" required>
             
             <label for="lg">Gari:</label>
-            <input type="text" id="lg" required>
+            <input type="text" id="lg" name="lg" required>
             
             <label for="address">Adireshi:</label>
-            <input type="text" id="address" required>
+            <input type="text" id="address" name="address" required>
             
             <label for="gender">Jinsi:</label>
-            <select id="gender" required>
+            <select id="gender" name="gender" required>
                 <option value="Select">Zabi</option>
                 <option value="male">Namiji</option>
                 <option value="female">Mace</option>
                 <option value="other">Wasu</option>
             </select>
             
-            <label for="contact">Email ko Numbar waya:</label>
-            <input type="text" id="contact" required>
+            <label for="contact">Email Ko Nubar waya:</label>
+            <input type="text" id="contact" name="contact" required>
             
-            <label for="password">Kalmar Sirri:</label>
-            <input type="password" id="password" required>
+            <label for="password">kirkiri kamar Sirri:</label>
+            <input type="password" id="password" name="password" required>
             
-            <label for="confirm-password">Kwafi Kalmar Sirri:</label>
-            <input type="password" id="confirm-password" required>
+            <label for="confirm-password">Maimaita Kalmat Sirri:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
             
-            <input type="submit" value="Submit">
+            <input type="Submit" value="Tura!->">
         </form>
     </div>
 </div>
@@ -807,32 +886,35 @@
         container.classList.toggle("open");
     }
 
-    function submitForm(event) {
+    async function submitForm(event) {
         event.preventDefault();
 
         // Get form values
-        var firstName = document.getElementById("first-name").value;
-        var surname = document.getElementById("surname").value;
-        var age = document.getElementById("age").value;
-        var farmer = document.getElementById("farmer").value;
-        var country = document.getElementById("country").value;
-        var state = document.getElementById("state").value;
-        var lg = document.getElementById("lg").value;
-        var address = document.getElementById("address").value;
-        var gender = document.getElementById("gender").value;
-        var contact = document.getElementById("contact").value;
+        var formData = new FormData(document.getElementById('registration-form'));
 
-        alert("Barka da zuwa Nigerian Agritech Solution domin manoman  Nigeria Rijista tayi daidai!.");
-        window.location.href = "dashboard.html";
+        // Send the form data to the server using fetch API
+        let response = await fetch('register.php', {
+            method: 'POST',
+            body: formData
+        });
+
+        let result = await response.json();
+        if (result.success) {
+            alert(result.message);
+            window.location.href = "dashboard.html";
+        } else {
+            alert(result.message);
+        }
     }
 </script>
 
 <section>
-    <p><center style="strong;">Ku na da akawun? <a href="longin.html" id="login"><center>Shiga</center></a></center></p>
+    <p><center>Kuna da account? </center></p>
+    <center><a href="login.html">Shiga</a></center></p>
 </section>
 </body>
 </html>
-</section>
+
 
 <section>
 <style>
@@ -918,16 +1000,14 @@ img {
 <div class="container75">
   <img src="hr.png" alt="Haruna Lawali">
   <div class="text65">
-    <h1 style="color: yellow">Ni Sunana, Haruna Lawali</h1>
+    <h1 style="color: yellow">Haruna Lawali</h1>
     <p style="color: yellow">Ina Godiya ga 3mtt program </p>
+ 
     <p style="color: yellow">
-       Ina Godiya ga malam Mu Dr Hakeem Ibrahim da Dr Bello Kaura.
+     A matsayina na dalibi, Ilimin Kiwon Lafiya da Ilimin Noma na da matukar muhimmanci wajen wanzar da tattalin arzikin kasarmu Najeriya. Ana buƙatar koyar da waɗannan sassa a cikin harsunan da manoma suka fahimta sosai.  
     </p>
-    <p style="color: yellow">
-        A matsayina na dalibi, ilimin kiwon lafiya da ilimin aikin gona na da matukar muhimmanci a koyar da su cikin yaren da mutane suka fi ji.
-    </p>
-    <p style="color: yellow">
-       Agritech Solution gudummawa ce ga zaman lafiyar al'ummar Najeriya.
+    <p style="color: yellow">     
+Ci gaban al'ummar kasar ya dogara ne akan ingantattun bangarorin ilimi da isasshen abinci don bukata. Nigerian Agritech Solution dandamali ne mai ba da gudummawa don haɓaka matsayin tattalin arzikin ƙasa. 
     </p>
   </div>
   <div class="glitter"></div>
