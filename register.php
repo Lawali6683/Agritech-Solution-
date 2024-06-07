@@ -3,7 +3,7 @@ require 'vendor/autoload.php'; // Include Composer's autoloader
 
 use MongoDB\Client;
 
-$client = new Client("mongodb://atlas-sql-665735a6b1716d124eba663e-38nqd.a.query.mongodb.net/myVirtualDatabase?ssl=true&authSource=admin");
+$client = new Client("https://eu-west-2.aws.data.mongodb-api.com/app/data-kfcqkcd/endpoint/data/v1");
 $collection = $client->myVirtualDatabase->users;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
